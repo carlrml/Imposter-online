@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Imposter Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Imposter Spiel Online</h1>
+
+  <div id="join-section">
+    <input type="text" id="nameInput" placeholder="Dein Name">
+    <button onclick="joinGame()">Beitreten</button>
+  </div>
+
+  <div id="lobby" style="display: none;">
+    <h2>Lobby</h2>
+    <ul id="playerList"></ul>
+    <input type="text" id="wordInput" placeholder="Geheimes Wort">
+    <button onclick="startGame()">Spiel starten</button>
+  </div>
+
+  <div id="game" style="display: none;">
+    <h2>Dein Wort</h2>
+    <p id="yourWord"></p>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
